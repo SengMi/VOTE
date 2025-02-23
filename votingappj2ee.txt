@@ -1,0 +1,31 @@
+CREATE DATABASE votingappj2ee;
+
+CREATE TABLE Candidate (
+    id INT NOT NULL,
+    candidate VARCHAR(255),
+    votes INT,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO Candidate (id, candidate, votes) VALUES (1, "Chan Myae Oo", 0);
+INSERT INTO Candidate (id, candidate, votes) VALUES (2, "Bhone Nay Lin Kai", 0);
+INSERT INTO Candidate (id, candidate, votes) VALUES (3, "William Tun", 0);
+INSERT INTO Candidate (id, candidate, votes) VALUES (4, "Min Khant Hein", 0);
+INSERT INTO Candidate (id, candidate, votes) VALUES (5, "Ye Yint Thaw", 0);
+
+
+CREATE TABLE User (
+    id INT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(255),
+    name VARCHAR(255),
+    password VARCHAR(255),
+    phone VARCHAR(255),
+    status VARCHAR(255),
+    role VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO User (email, name, password, phone, status, role) 
+VALUES ("admin@gmail.com", "admin123", "admin", '12345678911', "I am Admin User", "ROLE_ADMIN");
+
+SELECT * FROM User;
